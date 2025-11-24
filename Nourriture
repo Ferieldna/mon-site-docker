@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Festin — Ça parle de nourriture</title>
+  <title>Feriel — C'est la nourriture</title>
   <style>
     :root{
       --bg1:#fff7ef; --bg2:#fff1f0; --accent:#ff6b35; --muted:#6b6b6b;
@@ -38,7 +38,7 @@
     <div class="brand">
       <div class="logo">F</div>
       <div>
-        <div style="font-weight:800">Festin</div>
+        <div style="font-weight:800">Feriel</div>
         <div style="font-size:.8rem;color:var(--muted)">Célébration de la nourriture</div>
       </div>
     </div>
@@ -51,7 +51,7 @@
 
   <section class="hero" role="region" aria-label="Introduction">
     <div class="intro card">
-      <h1>Bienvenue chez Festin — la nourriture en fête</h1>
+      <h1>Bienvenue chez Feriel — la nourriture en fête</h1>
       <p class="lead">Des idées simples, des recettes créatives et des astuces pour sublimer tes assiettes. Que tu cuisines pour toi, pour des amis ou pour impressionner, trouve l'inspiration ici.</p>
       <a class="cta" href="#recettes">Voir les recettes</a>
 
@@ -126,15 +126,15 @@
           <strong>Festin</strong><div style="color:var(--muted)">Partage tes recettes et tes découvertes culinaires.</div>
         </div>
         <div style="text-align:right;color:var(--muted)">
-          <div>Made with ❤️ • <a href="https://github.com/TON_USER/mon-site-docker" target="_blank" style="color:var(--muted);text-decoration:underline">Voir le repo</a></div>
+          <div>Faire avec ❤️ •</div>
         </div>
       </div>
-      <div style="margin-top:1rem;color:var(--muted)">© <span id="year"></span> Festin — Tous droits réservés</div>
+      <div style="margin-top:1rem;color:var(--muted)">© <span id="year"></span> Feriel — Tous droits réservés</div>
     </div>
   </footer>
 
   <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
+    ('year').textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
