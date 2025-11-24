@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Festin — Ça parle de nourriture</title>
+  <style>
+    :root{
+      --bg1:#fff7ef; --bg2:#fff1f0; --accent:#ff6b35; --muted:#6b6b6b;
+      --card:#ffffff;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background:linear-gradient(180deg,var(--bg1),var(--bg2));color:#222;
+      -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;
+    }
+    header{display:flex;align-items:center;justify-content:space-between;padding:1rem 2rem;background:transparent;}
+    .brand{display:flex;gap:.75rem;align-items:center}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,#ffd7c2,#ffb3a1);display:grid;place-items:center;font-weight:700;color:#7a2b0a}
+    nav a{margin-left:1rem;text-decoration:none;color:var(--muted);font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:center;padding:2rem;max-width:1100px;margin:1rem auto}
+    .intro{padding:1.25rem;background:rgba(255,255,255,0.9);border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,0.07)}
+    h1{margin:0;font-size:2rem;color:#2b2b2b}
+    p.lead{color:var(--muted);margin-top:.5rem;line-height:1.5}
+    .cta{display:inline-block;margin-top:1rem;padding:.6rem 1rem;border-radius:10px;background:var(--accent);color:white;text-decoration:none;font-weight:700}
+    .card{background:var(--card);padding:1rem;border-radius:12px;margin-bottom:1rem}
+    .recipes{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;padding:2rem;max-width:1100px;margin:0 auto}
+    .recipe img{width:100%;height:140px;object-fit:cover;border-radius:10px}
+    .recipe h3{margin:.5rem 0 0;font-size:1.05rem}
+    footer{padding:2rem;text-align:center;color:var(--muted);font-size:.9rem}
+    .grid-small{display:grid;grid-template-columns:1fr 1fr;gap:.75rem}
+    @media(max-width:880px){.hero{grid-template-columns:1fr;padding:1rem}.intro{order:2}.hero-aside{order:1}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo">F</div>
+      <div>
+        <div style="font-weight:800">Festin</div>
+        <div style="font-size:.8rem;color:var(--muted)">Célébration de la nourriture</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#recettes">Recettes</a>
+      <a href="#saveurs">Saveurs</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" role="region" aria-label="Introduction">
+    <div class="intro card">
+      <h1>Bienvenue chez Festin — la nourriture en fête</h1>
+      <p class="lead">Des idées simples, des recettes créatives et des astuces pour sublimer tes assiettes. Que tu cuisines pour toi, pour des amis ou pour impressionner, trouve l'inspiration ici.</p>
+      <a class="cta" href="#recettes">Voir les recettes</a>
+
+      <div style="display:flex;gap:.75rem;margin-top:1.25rem">
+        <div style="flex:1" class="card">
+          <strong>Astuce du chef</strong>
+          <p style="margin:.5rem 0 0;color:var(--muted)">Utilise des herbes fraîches en toute fin de cuisson pour garder leur parfum.</p>
+        </div>
+        <div style="flex:1" class="card">
+          <strong>En bref</strong>
+          <p style="margin:.5rem 0 0;color:var(--muted)">Cuisson lente = saveur concentrée.</p>
+        </div>
+      </div>
+    </div>
+
+    <aside class="hero-aside card" aria-label="A propos">
+      <h2 style="margin:0 0 .5rem">Aujourd'hui au menu</h2>
+      <p style="color:var(--muted);margin:0 0 1rem">Salade tiède de lentilles, filet de saumon laqué, et tarte rustique aux pommes.</p>
+      <div style="border-radius:10px;overflow:hidden"><img src="https://images.unsplash.com/photo-1543349686-7b1f7d6b4b3b?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=0fe3b5f8b8d9d3b8c2e4f7e9f3b1a8a9" alt="Assiette gourmande" style="width:100%;height:220px;object-fit:cover"></div>
+    </aside>
+  </section>
+
+  <main id="recettes">
+    <section class="recipes" aria-label="Recettes populaires">
+      <article class="recipe card">
+        <img src="https://images.unsplash.com/photo-1512058564366-c9e3ff1b3b8a?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=6f3c6b9e8f3f8c7d8a9b6c5d4e3f2a1b" alt="Bowl coloré">
+        <h3>Bowl coloré aux légumes rôtis</h3>
+        <p style="color:var(--muted);margin:.5rem 0 0">Patate douce, pois chiches croustillants, avocat et sauce tahini — simple et complet.</p>
+      </article>
+
+      <article class="recipe card">
+        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=2a4b6c7d8e9f1a2b3c4d5e6f7a8b9c0d" alt="Pâtes">
+        <h3>Pâtes crémeuses au citron et basilic</h3>
+        <p style="color:var(--muted);margin:.5rem 0 0">Rapide, citronné et parfait pour les soirs pressés.</p>
+      </article>
+
+      <article class="recipe card">
+        <img src="https://images.unsplash.com/photo-1543351611-1785f5f2f1b8?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=7e8a9b0c1d2e3f4a5b6c7d8e9f0a1b2c" alt="Dessert">
+        <h3>Tarte rustique aux pommes</h3>
+        <p style="color:var(--muted);margin:.5rem 0 0">Pâte brisée maison, pommes caramélisées, un grand classique réconfortant.</p>
+      </article>
+
+      <article class="recipe card">
+        <img src="https://images.unsplash.com/photo-1525755662778-989d0524087e?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f" alt="Smoothie">
+        <h3>Smoothie vert énergie</h3>
+        <p style="color:var(--muted);margin:.5rem 0 0">Épinards, banane, lait d'amande et une touche de miel.</p>
+      </article>
+    </section>
+
+    <section id="saveurs" style="max-width:1100px;margin:0 auto;padding:0 2rem 2rem">
+      <div class="card" style="display:flex;gap:1rem;align-items:center">
+        <div style="flex:1">
+          <h2 style="margin:0">Voyage des saveurs</h2>
+          <p style="color:var(--muted)">Chaque cuisine raconte une histoire. Explore des parfums d'Italie, d'Asie, du Maghreb ou d'Amérique latine — et invente la tienne.</p>
+          <ul style="color:var(--muted);margin:.5rem 0 0 1rem">
+            <li>Épices & marinades</li>
+            <li>Techniques simples</li>
+            <li>Accords vin & dessert</li>
+          </ul>
+        </div>
+        <div style="width:220px">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=2a4b6c7d8e9f1a2b3c4d5e6f7a8b9c0d" alt="Assortiment d'épices" style="width:100%;height:140px;object-fit:cover;border-radius:8px">
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div style="max-width:900px;margin:0 auto">
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap">
+        <div style="text-align:left">
+          <strong>Festin</strong><div style="color:var(--muted)">Partage tes recettes et tes découvertes culinaires.</div>
+        </div>
+        <div style="text-align:right;color:var(--muted)">
+          <div>Made with ❤️ • <a href="https://github.com/TON_USER/mon-site-docker" target="_blank" style="color:var(--muted);text-decoration:underline">Voir le repo</a></div>
+        </div>
+      </div>
+      <div style="margin-top:1rem;color:var(--muted)">© <span id="year"></span> Festin — Tous droits réservés</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
